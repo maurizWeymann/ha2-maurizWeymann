@@ -8,7 +8,7 @@ import htw.berlin.wi.prog2.service.SandwichBuilder;
 
 import java.util.*;
 
-public class CommandLineUI {
+public class    CommandLineUI {
     private final UserInputWrapper input;
     private final SandwichBuilder builder;
     private final SimpleInputParser parser;
