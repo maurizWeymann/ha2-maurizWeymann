@@ -2,7 +2,7 @@ package htw.berlin.wi.prog2.domain;
 
 import java.util.List;
 
-public class PrecomputedSandwich implements Sandwich{
+public class DynamicallyComputedSandwich implements Sandwich {
 
     @Override
     public double calculatePrice() {
