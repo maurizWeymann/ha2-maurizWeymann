@@ -17,12 +17,10 @@ public class PrecomputedSandwich implements Sandwich{
     }
 
     @Override
-    public double calculatePrice() {
-        double price = 10;
-        return price; }
+    public double calculatePrice() {return preis; }
 
     @Override
-    public int calculateCalories() { return 0; }
+    public int calculateCalories() { return kalorien; }
 
     @Override
     public List<String> getIngredientNames() { return zutatenNamen; }
