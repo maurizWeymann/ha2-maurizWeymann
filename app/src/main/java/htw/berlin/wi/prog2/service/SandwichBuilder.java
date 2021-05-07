@@ -11,7 +11,7 @@ import java.util.List;
 
 public class SandwichBuilder {
 
-    List <Ingredient> neueZutaten = new ArrayList<>();
+    private List <Ingredient> neueZutaten = new ArrayList<>();
 
     public SandwichBuilder add(Ingredient ingredient) {
         // TODO hier die Annahme von Zutaten implementieren
@@ -22,12 +22,23 @@ public class SandwichBuilder {
     }
 
     public Sandwich buildPrecomputed() {
-        // TODO hier stattdessen die neue Klasse PrecomputedSandwich verwenden
-        return new PrecomputedSandwich(0.03, 3000, List.of("Brot", "Käse"));
+
+        double preis = 0;
+        int kalorien = 0;
+        List<String> zutatenNamen = new ArrayList<>();
+
+
+        for (Ingredient ingredient : neueZutaten) {
+            preis += ingredient.getPrice();
+            kalorien += ingredient.getCalories();
+            zutatenNamen.add(ingredient.getName());
+        }
+        neueZutaten.clear();
+
+        return new PrecomputedSandwich(preis, kalorien, zutatenNamen);
     }
 
     public Sandwich buildDynamicallyComputed() {
-        // TODO hier stattdessen die neue Klasse DynamicallyComputedSandwich verwenden
-        return new DynamicallyComputedSandwich();
+        return new DynamicallyComputedSandwich(neueZutaten);
     }
 }
