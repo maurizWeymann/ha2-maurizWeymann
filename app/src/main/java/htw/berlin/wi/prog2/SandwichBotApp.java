@@ -3,6 +3,7 @@
  */
 package htw.berlin.wi.prog2;
 
+import htw.berlin.wi.prog2.service.InputParser;
 import htw.berlin.wi.prog2.service.SimpleInputParser;
 import htw.berlin.wi.prog2.service.SandwichBuilder;
 import htw.berlin.wi.prog2.ui.CommandLineUI;
@@ -10,7 +11,7 @@ import htw.berlin.wi.prog2.ui.UserInputWrapper;
 
 public class SandwichBotApp {
     public static void main(String[] args) {
-        SimpleInputParser parser = new SimpleInputParser();
+        InputParser parser = new SimpleInputParser();
         SandwichBuilder builder = new SandwichBuilder();
         CommandLineUI clui = new CommandLineUI(new UserInputWrapper(System.in, System.out), builder, parser);
         clui.launch();

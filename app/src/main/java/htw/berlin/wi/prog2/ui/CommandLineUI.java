@@ -3,7 +3,7 @@ package htw.berlin.wi.prog2.ui;
 import htw.berlin.wi.prog2.data.Menu;
 import htw.berlin.wi.prog2.domain.Ingredient;
 import htw.berlin.wi.prog2.domain.Sandwich;
-import htw.berlin.wi.prog2.service.SimpleInputParser;
+import htw.berlin.wi.prog2.service.InputParser;
 import htw.berlin.wi.prog2.service.SandwichBuilder;
 
 import java.util.*;
@@ -11,9 +11,9 @@ import java.util.*;
 public class    CommandLineUI {
     private final UserInputWrapper input;
     private final SandwichBuilder builder;
-    private final SimpleInputParser parser;
+    private final InputParser parser;
 
-    public CommandLineUI(UserInputWrapper uiw, SandwichBuilder sb, SimpleInputParser ip) {
+    public CommandLineUI(UserInputWrapper uiw, SandwichBuilder sb, InputParser ip) {
         input = uiw;
         builder = sb;
         parser = ip;

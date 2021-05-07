@@ -2,9 +2,6 @@ package htw.berlin.wi.prog2.service;
 
 import htw.berlin.wi.prog2.domain.*;
 
-import htw.berlin.wi.prog2.service.SimpleInputParser;
-
-
 import java.util.ArrayList;
 import java.util.List;
 

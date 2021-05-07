@@ -2,15 +2,12 @@ package htw.berlin.wi.prog2.ui;
 
 import htw.berlin.wi.prog2.domain.DummySandwichImpl;
 import htw.berlin.wi.prog2.domain.Ingredient;
-import htw.berlin.wi.prog2.service.SimpleInputParser;
+import htw.berlin.wi.prog2.service.InputParser;
 import htw.berlin.wi.prog2.service.SandwichBuilder;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.AdditionalMatchers.not;
@@ -32,7 +29,7 @@ public class CommandLineUITest {
         when(builder.add(any())).thenReturn(builder);
         when(builder.buildPrecomputed()).thenReturn(new DummySandwichImpl());
 
-        SimpleInputParser parser = mock(SimpleInputParser.class);
+        InputParser parser = mock(InputParser.class);
         when(parser.ingredientsFromInput(anyString())).thenReturn(List.of(
                 new Ingredient("Käse", 0.01, 2000)
         ));
@@ -55,7 +52,7 @@ public class CommandLineUITest {
         when(builder.add(any())).thenReturn(builder);
         when(builder.buildPrecomputed()).thenReturn(new DummySandwichImpl());
 
-        SimpleInputParser parser = mock(SimpleInputParser.class);
+        InputParser parser = mock(InputParser.class);
         when(parser.ingredientsFromInput(anyString())).thenReturn(List.of(
                 new Ingredient("Käse", 0.01, 2000)
         ));
