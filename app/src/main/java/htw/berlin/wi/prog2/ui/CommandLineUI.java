@@ -21,7 +21,7 @@ public class    CommandLineUI {
 
     public String launch() {
         String inputLine = input.ask("Willkommen beim Sandwichbot! Was möchtest du gerne bestellen?");
-        while (!(inputLine.equals("Bestellung abschliessen") || inputLine.equals("Auf Wiedersehen"))) {
+        while (!(inputLine.equals("Bestellung abschliessen") || inputLine.equals("Auf Wiedersehen") || inputLine.equals("ok"))) {
             List<Ingredient> ingredients = parser.ingredientsFromInput(inputLine);
             if(ingredients.isEmpty()) {
                 inputLine = input.ask("Entschuldigung, ich habe dich nicht verstanden. Wähle aus folgenden Zutaten: "

@@ -6,11 +6,14 @@ public class DynamicallyComputedSandwich implements Sandwich {
 
     @Override
     public double calculatePrice() {
+        //if contains ingridient by name get price
+        getIngredientNames();
         return 0;
     }
 
     @Override
     public int calculateCalories() {
+        //if contains ingridient by name get price
         return 0;
     }
 

@@ -23,6 +23,8 @@ class SandwichBuilderTest {
     @Test
     @DisplayName("can build a precomputed sandwich with two ingredients")
     void buildASandwich() {
+        //ruft die Klasse Builder auf und erstellt ein neues Objekt namens sandwich
+        //
         Sandwich sandwich = builder.add(brot).add(kaese).buildPrecomputed();
 
         assertEquals(List.of("Brot", "Käse"), sandwich.getIngredientNames());

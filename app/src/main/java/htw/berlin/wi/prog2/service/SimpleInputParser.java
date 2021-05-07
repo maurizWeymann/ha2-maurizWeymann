@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+//
 public class SimpleInputParser {
     public List<Ingredient> ingredientsFromInput(String inputLine) {
         List<Ingredient> result = new ArrayList<>();
@@ -17,3 +18,4 @@ public class SimpleInputParser {
         return result;
     }
 }
+
