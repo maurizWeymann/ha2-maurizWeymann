@@ -87,4 +87,11 @@ class SandwichBuilderTest {
     }
 
     // TODO hier mind. einen Test hinzufügen, der das korrekte Werfen der IllegalSandwichException testet (assertThrows)
+
+    @Test
+    @DisplayName("Exeption nur eine Zutat")
+    void throwExetptionOneIngredients() {
+        assertThrows(IllegalSandwichException.class,()->builder.add(brot).buildPrecomputed());
+
+    }
 }

@@ -27,7 +27,8 @@ public class SandwichBuilder {
         int kalorien = 0;
         List<String> zutatenNamen = new ArrayList<>();
 
-
+if(neueZutaten.size() < 2){
+    throw new IllegalSandwichException("Needs more than one ingredient!");}
         for (Ingredient ingredient : neueZutaten) {
             preis += ingredient.getPrice();
             kalorien += ingredient.getCalories();
