@@ -22,13 +22,12 @@ public class SandwichBuilder {
     }
 
     public Sandwich buildPrecomputed() {
+        stelleSicherMinZweiIngredients();
 
         double preis = 0;
         int kalorien = 0;
         List<String> zutatenNamen = new ArrayList<>();
 
-if(neueZutaten.size() < 2){
-    throw new IllegalSandwichException("Needs more than one ingredient!");}
         for (Ingredient ingredient : neueZutaten) {
             preis += ingredient.getPrice();
             kalorien += ingredient.getCalories();
@@ -40,12 +39,17 @@ if(neueZutaten.size() < 2){
     }
 
     public Sandwich buildDynamicallyComputed() {
-        if(neueZutaten.size() < 2){
-            throw new IllegalSandwichException("Needs more than one ingredient!");}
+        stelleSicherMinZweiIngredients();
+
         DynamicallyComputedSandwich sandwich = new DynamicallyComputedSandwich(neueZutaten);
         neueZutaten.clear();
 
         return sandwich;
+    }
+
+    private void stelleSicherMinZweiIngredients() {
+        if(neueZutaten.size() < 2){
+            throw new IllegalSandwichException("Needs more than one ingredient!");}
     }
 
 }
