@@ -9,7 +9,7 @@ public class DynamicallyComputedSandwich implements Sandwich {
 
     public DynamicallyComputedSandwich(List<Ingredient> neueZutaten) {
 
-        this.neueZutaten = neueZutaten;
+        this.neueZutaten = new ArrayList<>(neueZutaten);
     }
 
     @Override

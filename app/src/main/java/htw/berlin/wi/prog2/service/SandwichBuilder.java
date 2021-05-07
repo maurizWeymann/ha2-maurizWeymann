@@ -39,6 +39,10 @@ public class SandwichBuilder {
     }
 
     public Sandwich buildDynamicallyComputed() {
-        return new DynamicallyComputedSandwich(neueZutaten);
+        DynamicallyComputedSandwich sandwich = new DynamicallyComputedSandwich(neueZutaten);
+        neueZutaten.clear();
+
+        return sandwich;
     }
+
 }
