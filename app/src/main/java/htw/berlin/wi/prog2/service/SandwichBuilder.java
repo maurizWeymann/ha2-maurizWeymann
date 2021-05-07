@@ -40,6 +40,8 @@ if(neueZutaten.size() < 2){
     }
 
     public Sandwich buildDynamicallyComputed() {
+        if(neueZutaten.size() < 2){
+            throw new IllegalSandwichException("Needs more than one ingredient!");}
         DynamicallyComputedSandwich sandwich = new DynamicallyComputedSandwich(neueZutaten);
         neueZutaten.clear();
 

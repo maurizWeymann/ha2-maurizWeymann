@@ -89,9 +89,16 @@ class SandwichBuilderTest {
     // TODO hier mind. einen Test hinzufügen, der das korrekte Werfen der IllegalSandwichException testet (assertThrows)
 
     @Test
-    @DisplayName("Exeption nur eine Zutat")
-    void throwExetptionOneIngredients() {
+    @DisplayName("Exeption nur eine Zutat für ein Precomputed Sandwich")
+    void throwExetptionOneIngredientsPre() {
         assertThrows(IllegalSandwichException.class,()->builder.add(brot).buildPrecomputed());
+
+    }
+
+    @Test
+    @DisplayName("Exeption nur eine Zutat für ein Dynamically Sandwich")
+    void throwExetptionOneIngredientsDynamic() {
+        assertThrows(IllegalSandwichException.class,()->builder.add(brot).buildDynamicallyComputed());
 
     }
 }
